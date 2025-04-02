@@ -1,0 +1,26 @@
+﻿body {
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.card {
+    margin: 20px;
+    background-color: white;
+}
+.header{
+    color: white;
+}
+.image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+}
+.btn{
+    position: sticky;
+}
+

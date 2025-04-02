@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WatchListMVC.Models.AddMovieViewModel
+
+<link rel="stylesheet" href="/css/add.css"/>
+
+<h1>Add Movie</h1>
+
+<form method="post" enctype="multipart/form-data">
+
+<div class="mt-3">
+    <lable class="form-label">Title</lable>
+    <input type="text" class="form-control" asp-for="Title"/>
+</div>
+
+<div class="mt-3">
+    <lable class="form-label">Description</lable>
+    <input type="text" class="form-control" asp-for="Description" />
+</div>
+
+<div class="mt-3">
+    <lable class="form-label">Type</lable>
+    <input type="text" class="form-control" asp-for="Type"/>
+</div>
+
+<div class="mt-3">
+    <lable class="form-label">Watch date</lable>
+    <input type="date" class="form-control" asp-for="WatchDate"/>
+</div>
+
+<div class="mt-3">
+    <lable class="form-label">Platform</lable>
+    <input type="text" class="form-control" asp-for="Platform" />
+</div>
+    <div>
+        <label>Upload Image</label>
+        <input type="file" name="imageFile" asp-for="ImageData" />
+    </div>
+
+<div class="mt-3">
+<button type="submit" class="btn btn-primary">Save</button>
+</div>
+
+</form>

@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model List<WatchListMVC.Models.MovieModel>
+
+<link rel="stylesheet" href="/css/list.css" />
+
+<body>
+
+
+<div class="container text-center">
+    <div class="row justify-content-center">
+            <h1 class="header">Watch List</h1>
+        @foreach (var item in Model)
+        {
+            <div class="card mb-4 shadow-sm" style="width: 15rem; border-radius: 10px; overflow: hidden;">
+                @if (item.ImageData != null)
+                {
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(item.ImageData)" alt="Movie Image" class="card-img-top" style="object-fit: cover;" />
+                }
+                <div class="card-body">
+                    <h5 class="card-title text-primary">@item.Title</h5>
+                    <p class="card-text text-muted">@item.Description</p>
+                    <a class="btn btn-info w-100" asp-controller="Movie" asp-action="Edit" asp-route-id="@item.Id">View and Edit</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+ 
+</body>
+
